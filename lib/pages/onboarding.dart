@@ -23,7 +23,7 @@ class _OnboardingState extends State<Onboarding> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset("images/dumbell.jpg",
+                Image.asset("images/dumbell.png",
                     height: 90, width: 90, fit: BoxFit.cover),
                 Text(
                   "FITNESS APP",
@@ -105,7 +105,7 @@ class _OnboardingState extends State<Onboarding> {
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(60)),
-                      child: Image.asset("images/instagram.jpg",
+                      child: Image.asset("images/instagram.png",
                           height: 40, width: 40, fit: BoxFit.cover),
                     ),
                     Container(
@@ -113,7 +113,7 @@ class _OnboardingState extends State<Onboarding> {
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(60)),
-                      child: Image.asset("images/search.jpg",
+                      child: Image.asset("images/search.png",
                           height: 40, width: 40, fit: BoxFit.cover),
                     )
                   ],
