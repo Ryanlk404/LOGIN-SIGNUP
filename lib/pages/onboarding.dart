@@ -12,7 +12,6 @@ class _OnboardingState extends State<Onboarding> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-            padding: EdgeInsets.only(top: 100),
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
@@ -22,6 +21,7 @@ class _OnboardingState extends State<Onboarding> {
               Color(0xff880e4f)
             ], begin: Alignment.topLeft, end: Alignment.topRight)),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset("images/dumbell.jpg",
                     height: 90, width: 90, fit: BoxFit.cover),
@@ -41,13 +41,16 @@ class _OnboardingState extends State<Onboarding> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
+                SizedBox(height: 40),
                 Container(
+                  padding: EdgeInsets.only(top: 10, bottom: 10),
                   margin: EdgeInsets.only(left: 30, right: 30),
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
                     border: Border.all(
-                      color: Colors.white, // Set the border color to white
-                    ),
+                        color: const Color.fromARGB(255, 214, 228, 236),
+                        width: 2),
+                    borderRadius: BorderRadius.circular(30),
                   ),
                   child: Center(
                     child: Text(
@@ -59,6 +62,61 @@ class _OnboardingState extends State<Onboarding> {
                       ),
                     ),
                   ),
+                ),
+                SizedBox(height: 35),
+                Container(
+                  padding: EdgeInsets.only(top: 10, bottom: 10),
+                  margin: EdgeInsets.only(left: 30, right: 30),
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "SIGN UP",
+                      style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
+                ),
+                Text(
+                  "Login with Social Media",
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white,
+                  ),
+                ),
+                Row(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(60)),
+                      child: Image.asset("images/facebook.png",
+                          height: 40, width: 40, fit: BoxFit.cover),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(60)),
+                      child: Image.asset("images/instagram.jpg",
+                          height: 40, width: 40, fit: BoxFit.cover),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(60)),
+                      child: Image.asset("images/search.jpg",
+                          height: 40, width: 40, fit: BoxFit.cover),
+                    )
+                  ],
                 ),
               ],
             )));
